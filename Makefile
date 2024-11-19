@@ -1,4 +1,5 @@
 PREFIX ?= /usr
+LDLIBS = -lX11 -lxkbfile
 
 all: getlayout
 
@@ -7,8 +8,5 @@ install: getlayout
 
 clean:
 	rm -f getlayout
-
-getlayout:
-	cc -lX11 -lxkbfile getlayout.c -o getlayout
 
 .PHONY: all install clean
