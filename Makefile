@@ -4,7 +4,7 @@ LDLIBS = -lX11 -lxkbfile
 all: getlayout
 
 install: getlayout
-	install -m 555 getlayout ${PREFIX}/bin/getlayout
+	install -m 755 getlayout ${PREFIX}/bin/getlayout
 
 clean:
 	rm -f getlayout
